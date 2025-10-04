@@ -12,8 +12,10 @@ app.use(cors());
 
 const notesRouter = require("./routes/notes");
 const authRouter = require("./routes/auth");
+const weatherRouter = require("./routes/weather");
 app.use("/api/notes", notesRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/weather", weatherRouter);
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {

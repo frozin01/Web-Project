@@ -4,10 +4,12 @@ import Home from './routes/Home';
 import About from './routes/About';
 import Register from './routes/Register';
 import Login from './routes/Login';
+import Weather from './routes/Weather';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 import NotFound from './components/NotFound';
 import GuestRoute from "./components/GuestRoute";
+
 
 function App() {
   return (
@@ -22,6 +24,11 @@ function App() {
         <Route path="/about" element={
           <ProtectedRoute>
             <About />
+          </ProtectedRoute>
+        } />
+        <Route path="/weather" element={
+          <ProtectedRoute>
+            <Weather />
           </ProtectedRoute>
         } />
         <Route path="/register" element={

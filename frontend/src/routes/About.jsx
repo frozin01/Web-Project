@@ -12,7 +12,7 @@ function About() {
         <li><strong>Frontend:</strong> React</li>
       </ul>
       <p>
-        Created by <strong>frozin01</strong> with help from GitHub Copilot.
+        Created by <strong>frozin01</strong> with help from GPT.
       </p>
     </div>
   );

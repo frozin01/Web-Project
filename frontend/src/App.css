@@ -64,6 +64,14 @@ body {
   background: #fafafa;
 }
 
+.weather-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #fafafa;
+}
+
 /* Navbar Styling */
 .nav-bar {
   display: flex;

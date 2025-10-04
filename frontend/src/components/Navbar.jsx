@@ -6,7 +6,7 @@ function Navbar() {
   const location = useLocation();
   const isLoggedIn = !!localStorage.getItem("token");
 
-  const validRoutes = ["/", "/about", "/login", "/register"];
+  const validRoutes = ["/", "/about", "/login", "/register", "/weather"];
   if (!validRoutes.includes(location.pathname)) {
     return null;
   }
@@ -22,6 +22,7 @@ function Navbar() {
         <>
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/about" className="nav-link">About</Link>
+          <Link to="/weather" className="nav-link">Weather</Link>
           <button onClick={handleLogout} className="logout-btn">Logout</button>
         </>
       ) : (
