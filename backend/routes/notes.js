@@ -1,6 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const Note = require("../models/notes");
+const auth = require('../middleware/auth');
+
+// Protect all notes routes
+router.use(auth);
 
 // Create a note
 router.post("/", async (req, res) => {

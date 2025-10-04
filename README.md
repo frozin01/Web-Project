@@ -6,7 +6,8 @@ Web-Project is a learning and practice repository about web.
 - **frontend/**: Frontend source code
 
 ## Features
-- *Will be added later*
+- Authentication
+- Notes
 
 ## Technologies Used
 - Backend: Node.js (Express.js) and MongoDB
@@ -17,7 +18,7 @@ Web-Project is a learning and practice repository about web.
 ```bash
 cd backend
 npm init -y
-npm install express nodemon mongoose dotenv cors
+npm install express nodemon mongoose dotenv cors bcryptjs jsonwebtoken
 ```
 - Frontend
 ```bash

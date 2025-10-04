@@ -11,7 +11,11 @@ function Home() {
 
   // Fetch notes
   useEffect(() => {
-    fetch(API_URL)
+    fetch(API_URL, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`
+        }
+      })
       .then((res) => res.json())
       .then(setNotes)
       .catch(console.error);
@@ -28,7 +32,10 @@ function Home() {
     if (!form.title) return;
     const res = await fetch(API_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`
+      },
       body: JSON.stringify(form),
     });
     const newNote = await res.json();
@@ -38,7 +45,12 @@ function Home() {
 
   // Delete note
   const handleDelete = async (id) => {
-    await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+    await fetch(`${API_URL}/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`
+      }
+    });
     setNotes(notes.filter((note) => note._id !== id));
   };
 
@@ -53,7 +65,10 @@ function Home() {
     e.preventDefault();
     const res = await fetch(`${API_URL}/${editId}`, {
       method: "PUT",
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`
+      },
       body: JSON.stringify(form),
     });
     const updatedNote = await res.json();
