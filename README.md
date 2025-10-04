@@ -7,7 +7,9 @@ Web-Project is a learning and practice repository about web.
 
 ## Features
 - Authentication
+![authentication](docs/authentication.png)
 - Notes
+![notes](docs/notes.png)
 
 ## Technologies Used
 - Backend: Node.js (Express.js) and MongoDB
